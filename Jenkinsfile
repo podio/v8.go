@@ -11,7 +11,7 @@ pipeline {
                 script {
                     def branchName = env.CHANGE_BRANCH ?: env.BRANCH_NAME
                     env.branchName = branchName
-                    echo "Using branch/commit: ${env.BRANCH_NAME}"
+                    echo "Using branch/commit: ${env.branchName}"
                 }
                 checkout([
                     $class: 'GitSCM',
